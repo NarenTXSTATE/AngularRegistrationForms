@@ -1,0 +1,36 @@
+<div class="container">
+  
+  <h2 align="center">Credit Card Details</h2>
+
+<form>
+  <div class="form-group">
+  <label for="cardname">CardName : </label>
+  <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        CardName<span class="caret"></span>
+      </button>
+      <select class="dropdown-menu form-control" name="cardname" [(ngModel)]="card.cardname">
+        <option>VISA</option>
+        <option>MASTER</option>
+        <option>Rupay</option>
+      </select>
+  </div>
+  </div>
+  
+  <div class="form-group">
+  <label for="fullname">FullName : </label>
+  <input type="text" name="fullname" class="form-control" [(ngModel)]="card.fullname"/>
+  </div>
+  
+  <div class="form-group">
+  <label for="validtill">ValidTill : </label>
+  <input type="text" name="validtill" class="form-control" [(ngModel)]="card.validtill"/>
+  </div>
+ 
+ <input type="submit" value="ADD" class="btn btn-primary" (click)="addCard()"/>
+  
+  </form>
+  
+  <div>{{card.fullname}}</div>
+
+</div>
